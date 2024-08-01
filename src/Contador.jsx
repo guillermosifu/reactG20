@@ -10,7 +10,7 @@ const Contador = () => {
   return (
     <div>   
       <p>has click aca {count} veces</p>
-      <button onClick={()=>setCount(count + 100)} >aumenta</button>
+      <button onClick={()=>setCount(count + 1)} >aumenta</button>
       <button onClick={()=>setCount(0)} >reset</button>
       <p>{count}</p>     
          
