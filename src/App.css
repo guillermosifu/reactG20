@@ -40,3 +40,17 @@
 .read-the-docs {
   color: #888;
 }
+
+.repo {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1em 0;
+  border-radius: 10px;
+}
+
+.repo:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+h2 {
+  margin: 0;
+}
