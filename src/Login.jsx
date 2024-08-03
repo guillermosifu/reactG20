@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 
 
@@ -10,12 +10,21 @@ const Login = () => {
  const handleLogin=()=>{
     localStorage.setItem("user",username)
     localStorage.setItem("pass",password)
+    alert("datos guardados en local")
  }
 
  const handleDelete =()=>{
-    localStorage.removeItem()
+    localStorage.removeItem("user")
+    localStorage.removeItem("pass")
+    alert("se cierra sesion")
  }
 
+ useEffect(()=>{
+ const localUser = localStorage.getItem("user")
+ const localPass = localStorage.getItem("pass")
+ setUsername(localUser)
+ setPassword(localPass)
+ },[])
 
   return (
     <div>
